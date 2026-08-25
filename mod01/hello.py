@@ -24,3 +24,14 @@ farenheit = float(input("Enter temperature in Fahrenheit: "))
 celcius = (farenheit - 32) * 5/9
 print("The temperature in Celsius is",celcius)
 
+age = int(input("Enter your age: "))
+if age >= 65:
+    print("You are retired.")
+elif age >= 18:
+    print("You are working-age.")
+elif age >= 7:
+    print("You are in school.")
+elif age >=3:
+    print("Your are a toddler.")
+else:
+    print("You are a small child.")
