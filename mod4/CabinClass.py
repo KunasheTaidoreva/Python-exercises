@@ -1,5 +1,5 @@
 Cabin = str(input("Enter your cabin class please: "))
-if Cabin == ("LUX"):
+if Cabin == "LUX":
     print("upper-deck cabin with a balcony")
 elif Cabin==" A":
     print("above the car deck, equipped with a window.")
