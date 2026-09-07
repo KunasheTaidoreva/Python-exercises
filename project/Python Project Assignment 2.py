@@ -13,7 +13,7 @@ else:
     print("2. Exit Game")
     print("3. View Player Info")
     print("4. lopeta")
-    selection  = str(input("Enter number between 1 and 4 "))
+    selection  = str(input("Enter number between 1 and 4 : "))
     while selection != "4":
         #assigning different commands to different responses then outputting the main menu again
         if selection == "1":
