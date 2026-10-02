@@ -1,2 +1,2 @@
-SOFTWARE 1.
- python exercise - hello world done
+Player reached level 3.
+Player reached level 7.

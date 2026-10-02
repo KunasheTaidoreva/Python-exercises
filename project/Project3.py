@@ -2,11 +2,12 @@ global Name
 global Age
 items = []
 def game_intro():
-    print("WELCOME TO PRISON BREAK")
-    print("AFTER 20 YEARS IN PRISON, YOU FINALLY GET THE CHANCE TO ESCAPE THE UNDERGROUND BUNKER THANKS TO THE HEAVY LIGHTNING THAT STRUCK THE MAIN POWER SUPPLY.")
-    print("The lighting killd most of the prison's power, leaving the doors to cells unlocked")
-    print("But the doors to each floor have an emegency power supply, so they are still locked")
-    print("You are currently on the last floor(3) of the underground bunker and you decide to move in the dark hallway but you bump into other prisoners!!")
+    print("*"*15,f"WELCOME TO PRISON ESCAPE GAME", "*"*15)
+    print("")
+    print("AFTER 15 YEARS IN PRISON, YOU FINALLY GET THE CHANCE TO ESCAPE PRISON THANKS TO THE HEAVY LIGHTNING THAT STRUCK THE MAIN POWER SUPPLY.")
+    print("The lighting killed most of the prison's power, leaving the prison vulnerable to escape")
+    print("But the doors are now less secure, and you have to make a choice to escape the prison.")
+
 
 class Game_properties:
     def __init__(self,select,name,age):
@@ -50,9 +51,9 @@ class Game_properties:
                 selection  = str(input("Enter number between 1 and 4 :"))
         print("No more commands")
 
-def Lone_wolf():
+def Lone_wolf(a,b):
     import random
-    print("You're now on your own!!!")
+    print("*"*18,"You're now on your own!!!","*"*18)
     print("Keep in mind you've got 3 chances for this stage")
     x = random.randint(1,25)
     y = random.randint(26,50)
@@ -69,97 +70,78 @@ def Lone_wolf():
             count+=1        
     if flag == True:
         print("You got lucky, guard didn't spot you")
-        print("Moving on to the next level")
     else:
         print("You've been spotted by a guard. RUNNN!!!")
-        Escaping_Guard()      
+        Escaping_Guard(a)      
 
-def team_route():
-    list = []
-
+def team_route(a,b):
+    # list called passcode to hold the players build up passcode
+    passcode = []
     print("You decided to work with the other prisoners.")
     print("Together, you make a plan to escape.")
-
     print("You have one job:")
-    print("1. Watch for the guards and find the key if spotted")
-
-    choice = str(input("Enter one to proceed: "))
-
+    print("Watch for the guards and find the key if spotted")
+    choice = str(input("Enter 1 to proceed: "))
     if choice == "1":
         print("You watch the hallway.")
-        print("A guard is coming!")
+        print(" "*20,"!!!A GUARD IS COMING!!!"," "*20)
         print("You and your group now have to find a way to figure out the key code for the door")
         print("The security code has 3 places")
 
         # QUESTION 1
         c1 = 0
-
         while c1 < 2:
-            m1 = int(input("What is the square root of 64? "))
-
+            m1 = int(input("What is the square root of 64?: "))
             if m1 == 8:
-                list.append(m1)
-                print(f"Your passcode is taking shape, {list}")
+                passcode.append(m1)
+                print(f"Your passcode is taking shape:, {passcode}")
                 break
             else:
                 c1 += 1
-
                 if c1 == 2:
-                    print("GAME OVER", Name)
-                    screen_menu()
+                    print("*"*20,"SORRY,GAME OVER",a,"*"*20)
+                    screen_menu(a,b)
                     return
                 else:
                     print("You are so close, don't quit now!!!")
-
-        # QUESTION 2
+       # QUESTION 2
         c2 = 0
-
         while c2 < 2:
-            print("Okay, moving to the next question")
-            m2 = int(input("A leap year is a year divisible by ___? "))
-
+            print("Okay, moving on to the next question")
+            m2 = int(input("A leap year is a year divisible by ___?: "))
             if m2 == 4:
-                list.append(m2)
-                print(f"You're one step closer from cracking that code {list}")
+                passcode.append(m2)
+                print(f"You're one step closer from cracking that code {passcode}")
                 break
             else:
                 c2 += 1
-
                 if c2 == 2:
-                    print("GAME OVER")
+                    print("*"*20,"GAME OVER","*"*20)
                     screen_menu()
                     return
                 else:
                     print("Don't quit now, give it another shot")
-
         # QUESTION 3
         c3 = 0
-
         while c3 < 2:
             print("Last question,")
-
             m3 = int(input("How many hours does an average human need to rest?: "))
-
             if m3 == 8:
-                list.append(m3)
+                passcode.append(m3)
                 print("You really know what you are doing :)")
-                print(f"Here is your passcode {list}")
-                print("YOU HAVE CLEARED THIS STAGE!!!")
+                print(f"Here is your passcode {passcode}")
+                print("*"*20,"!!!CONGRATULATIONS!!!","*"*20)
                 return
-
             else:
                 c3 += 1
-
                 if c3 == 2:
-                    print("SORRY MATE, GAME OVER")
+                    print("*"*20,"SORRY MATE, GAME OVER, YOU LOSE","*"*20)
                     screen_menu()
                     return
                 else:
                     print("Try again")
 
-def Escaping_Guard():
-    global Name
-    global Age
+def Escaping_Guard(a):
     print("Here are some quizzes to help you run away from the guard")
     print("If you get 3 of them correct, congrats you will proceed to next game.")
     q1 = 0
@@ -174,68 +156,73 @@ def Escaping_Guard():
                 riddle2 = str(input("What has a head and a tail but no body?"))
                 if riddle2 == "coin":
                     print("Well done, You're impressive")
-                    print("Moving on to the last riddle,",Name)
+                    print("Moving on to the last riddle,",a)
                     while q3 <2:
                         riddle3 = str(input("What goes up but never comes down"))
                         if riddle3 == "age":
-                            print("Well done!!!, YOU HAVE CLEARED THE FISRT LEVEL")
+                            print("*"*20,"!!!CONGRATULATIONS!!!","*"*20)
                             return
                         else:
                             q3 = q3+1
                             if q3 ==2:
-                                print("sorry mate!! GAME OVER ")
+                                print("*"*20,"SORRY MATE!! GAME OVER ","*"*20)
                                 return
                             else:
                                 print("Try again!!")
                 else:
                     q2 = q2 +1
                     if q2 ==2:
-                        print("sorry mate!! GAME OVER ")
+                        print("*"*20,"SORRY MATE!! GAME OVER ","*"*20)
                         return
                     else:
                         print("Try again!!")
         else:
             q1 = q1+1
             if q1 ==2:
-                print("sorry mate!! GAME OVER ")
+                print("*"*20,"SORRY MATE!! GAME OVER ","*"*20)
             else:
                 print("Try again!!")
 # Function for starting the game
-def start_game():
+def start_game(a,b):
     import random
     print("Starting the game...")
     game_intro()
     print("What are you going to do: ")
     print("1.Work with other prisoners")
     print("2.Move forward by yourself: ")
-    print("Exit game!!")
+    print("3.Exit game!!")
     choice = int(input("Choose 1 or 2 or 3: "))
     if choice==1:
-        team_route() 
+        team_route(a,b) 
     elif choice == 2:
-        Lone_wolf()
+        Lone_wolf(a,b)
     elif choice == 3:
         print("Exiting current game section.....")
-        screen_menu()
-def screen_menu():
+        screen_menu(a,b)
+def screen_menu(a,b):
+        
         print("MAIN MENU...")
         print("1. Start Game")
         print("2. Exit Game")
         print("3. View Player Info")
-        print("4. lopeta")
         selection  = str(input("Enter number between 1 and 4 : "))
         while selection != "4":
             #assigning different commands to different responses then outputting the main menu again
             if selection == "1":
                 print("Starting the game...")
-                start_game()
-                selection  = str(input("Enter number between 1 and 4 :"))
+                start_game(a,b)
+                print("MAIN MENU...")
+                print("1. Start Game")
+                print("2. Exit Game")
+                print("3. View Player Info")
+                print("4. lopeta")
+                selection  = str(input("Enter number between 1 and 4 ,:"))
             elif selection == "2":
                 print("Ending the game, see you soon!...")
                 return
             elif selection == "3":
-                print("Player name =", Name)
-                print("Age =", Age)
+                print("Player name =", a)
+                print("Age =", b)
                 print("MAIN MENU...")
                 print("1. Start Game")
                 print("2. Exit Game")
@@ -243,32 +230,3 @@ def screen_menu():
                 print("4. lopeta")
                 selection  = str(input("Enter number between 1 and 4 :"))
         print("No more commands")
-
-
-
-Name = str(input("Enter your player name: "))
-Age = int(input("Enter your age: "))
-
-# Checking if the player is underage
-if Age <= 12:
-    print("Sorry, you are underage!!!")
-    print("SHUTTING DOWN THE GAME....!!!")
-else:
-    print("Hello", Name)
-    selection = ""
-    while selection != "5":
-        print("\nMAIN MENU...")
-        print("1. Start Game")
-        print("2. View Player Info")
-        print("3. Exit Game")
-        selection = input("Enter number between 1 and 3: ")
-        if selection == "1":
-            start_game()
-        elif selection =="2":
-            print(f"You are, {Name}, {Age} years old")
-        elif selection == "3":
-            print("Ending the game, see you soon!...")
-        else:
-            print("Invalid selection.")
-
-    print("No more commands")
