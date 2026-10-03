@@ -1,2 +1,3 @@
 SOFTWARE 1.
- python exercise - hello world done
+Kunashe Taidoreva
+Projects and Exercises done

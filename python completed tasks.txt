@@ -1,2 +1,3 @@
-Player reached level 3.
-Player reached level 7.
+SOFTWARE 1.
+Kunashe Taidoreva
+Projects and Exercises done
