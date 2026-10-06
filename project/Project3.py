@@ -132,7 +132,7 @@ def team_route(a,b):
                 c3 += 1
                 if c3 == 2:
                     print("*"*20,"SORRY MATE, GAME OVER, YOU LOSE","*"*20)
-                    screen_menu()
+                    screen_menu(a,b)
                     return
                 else:
                     print("Try again")
@@ -140,6 +140,7 @@ def team_route(a,b):
 def Escaping_Guard(a):
     print("Here are some quizzes to help you run away from the guard")
     print("If you get 3 of them correct, congrats you will proceed to next game.")
+    print("")
     q1 = 0
     q2= 0
     q3 = 0
