@@ -1,5 +1,6 @@
 STUDENT NAME: KUNASHE TAIDOREVA
-GAME NAME   : PRISON ESCAPE GAME
+
+GAME NAME   : PRISON ESCAPE
 
 GAME IDEA   :The game is about a player who was sentenced to 15 years in prison. A thunderstorm swept the country's power supply and left 
              prison vulnerable.
