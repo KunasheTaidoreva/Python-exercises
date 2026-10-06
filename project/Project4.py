@@ -23,7 +23,8 @@ class Verification:
                     b = self.Age
                     Project3.start_game(a,b)
                 elif selection =="2":
-                    print(f"You are, {self.Name}, {self.Age} years old")
+                    print(f"PLAYER ID: {self.Name}")
+                    print(f"PLAYER AGE: {self.Age}")
                 elif selection == "3":
                     print("Ending the game, see you soon!...")
                 else:
