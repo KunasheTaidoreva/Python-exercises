@@ -52,13 +52,12 @@ def Lone_wolf(a,b):
     print("*"*18,"You're now on your own!!!","*"*18)
     print("Keep in mind you've got 3 chances for this stage")
     x = random.randint(1,25)
-    y = random.randint(26,50)
     count = 0
     flag = False
     while count<3:
-        print(x,y)
-        rNum = int(input("Enter a random number between 1 and 50: "))
-        if rNum >= x and rNum <= y:
+        print(x)
+        rNum = int(input("Enter a random number between 1 and 25: "))
+        if rNum ==x:
             print("Congratulations you guessed correct!!!")
             flag = True
             break
@@ -67,7 +66,7 @@ def Lone_wolf(a,b):
     if flag == True:
         print("You got lucky, guard didn't spot you")
     else:
-        print("You've been spotted by a guard. RUNNN!!!")
+        print("*"*20,"You've been spotted by a guard. RUNNN!!!","*"*20)
         Escaping_Guard(a)      
 # function team_route() that has the program code if the player chooses to proceed with other prisoners
 def team_route(a,b):
@@ -114,7 +113,7 @@ def team_route(a,b):
                 c2 += 1
                 if c2 == 2:
                     print("*"*20,"GAME OVER","*"*20)
-                    screen_menu()
+                    screen_menu(a,b)
                     return
                 else:
                     print("Don't quit now, give it another shot")
@@ -145,18 +144,21 @@ def Escaping_Guard(a):
     q2= 0
     q3 = 0
     while q1 < 2:
-        riddle1 = str(input("What has a face and hands but no arms and legs"))
+        riddle1 = str(input("What has a face and hands but no arms and legs: "))
         if riddle1 == "clock":
             print("Well done :) Moving to the next one")
+            print("") 
             print("RIDDLE 2....")
             while q2 < 2:
-                riddle2 = str(input("What has a head and a tail but no body?"))
+                riddle2 = str(input("What has a head and a tail but no body?: "))
                 if riddle2 == "coin":
                     print("Well done, You're impressive")
+                    print("") 
                     print("Moving on to the last riddle,",a)
                     while q3 <2:
-                        riddle3 = str(input("What goes up but never comes down"))
+                        riddle3 = str(input("What goes up but never comes down?: "))
                         if riddle3 == "age":
+                            print("") 
                             print("*"*20,"!!!CONGRATULATIONS!!! YOU WON!!!","*"*20)
                             return
                         else:
