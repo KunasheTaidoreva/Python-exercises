@@ -158,7 +158,7 @@ def Escaping_Guard(a):
                     print("Moving on to the last riddle,",a)
                     while q3 <2:
                         riddle3 = str(input("What goes up but never comes down?: "))
-                        if riddle3 == "age":
+                        if riddle3 == "age".lower():
                             print("") 
                             print("*"*20,"!!!CONGRATULATIONS!!! YOU WON!!!","*"*20)
                             return

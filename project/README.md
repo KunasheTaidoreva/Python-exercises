@@ -1,3 +1,5 @@
+THE GAME WILL BE EXECUTED FROM THE FILE Project5.py AS OTHER FILES ARE WORKING AS MODULES.
+
 STUDENT NAME: KUNASHE TAIDOREVA
 
 GAME NAME   : PRISON ESCAPE
@@ -14,5 +16,3 @@ OBJECTIVE   :The player has to play along with the gameplay and complete all cha
 GAME PATHS  :The game consists of 2 main paths and one subpath.  Either work with other prisoners or work alone. The paths completely 
             independent of each other. Each path has different challenges, choices and instructions but all lead to one goal, TO WIN!!!
             If the player chooses to play chooses to work with other prisoners the game will lead him to another subpart.   
-
-THE GAME WILL BE EXECUTED FROM THE FILE Project5.py AS OTHER FILES ARE WORKING AS MODULES.
