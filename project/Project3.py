@@ -55,7 +55,7 @@ def Lone_wolf(a,b):
     count = 0
     flag = False
     while count<3:
-        print(x)
+        #print(x)
         rNum = int(input("Enter a random number between 1 and 25: "))
         if rNum ==x:
             print("Congratulations you guessed correct!!!")
